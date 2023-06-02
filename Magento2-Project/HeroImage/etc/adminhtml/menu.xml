@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="AgTrader_HeroImage::HeroImage" title="HeroImage" module="AgTrader_HeroImage" sortOrder="51" resource="AgTrader_HeroImage::HeroImage"/>
+        <add id="AgTrader_HeroImage::post" title="Manage Hero Image" module="AgTrader_HeroImage" sortOrder="10" action="agtrader_heroimages/HeroImage" resource="AgTrader_HeroImage::post" parent="AgTrader_HeroImage::HeroImage"/>
+    </menu>
+</config>

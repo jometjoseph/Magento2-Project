@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="AgTrader\HeroImage\Api\Data\HerosInterface" type="AgTrader\HeroImage\Model\Heros" />
+    <preference for="AgTrader\HeroImage\Api\HerosRepositoryInterface" type="AgTrader\HeroImage\Model\HerosRepository" />
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="agtrader_heroimages_heroimage_grid_data_source" xsi:type="string">AgTrader\HeroImage\Model\ResourceModel\Heroimage\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="AgTrader\HeroImage\Model\ResourceModel\Heroimage\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">hero_image</argument>
+            <argument name="resourceModel" xsi:type="string">AgTrader\HeroImage\Model\ResourceModel\Heroimage</argument>
+        </arguments>
+    </virtualType>
+</config>
